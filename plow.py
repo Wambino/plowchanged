@@ -103,9 +103,7 @@ async def plotwatcher(paths, plot_queue, loop):
         watcher.watch(
             alias=path,
             path=path,
-            flags=aionotify.Flags.MI apologize for the abrupt cut-off in the previous response. Here's the continuation and completion of the code:
-
-```python
+            flags=aionotify.Flags.MI,
             flags=aionotify.Flags.MOVED_TO,
         )
     await watcher.setup(loop)
@@ -190,9 +188,6 @@ async def plow(dest, plot_queue, loop):
                     await plot_queue.put(plot)
                     logging.info(f"{dest} plow exiting")
                     break
-Here's the continuation and completion of the code:
-
-```python
                 else:
                     logging.error(f"⁉️ {cmd!r} exited with {proc.returncode}")
                     await asyncio.sleep(BASE_SLEEP_TIME * (2 ** i))
